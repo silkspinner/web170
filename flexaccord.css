@@ -1,0 +1,58 @@
+
+div#accordion {
+    border-color: #888;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: .8em;
+}
+div#accordion:hover{
+    border-color: darkred;
+}
+div#accordion:hover h3{
+    border-color: darkred;
+}
+
+div#accordion div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+}
+
+div#accordion h3 {
+    border-color: #888;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: .5em;
+    background-color: #ccc0cc;
+}
+
+div#accordion article {
+    margin:.5em;
+    width: 35%;
+    max-width: 16em;
+    max-height: 8em;
+    min-width: 12em;
+    min-height: 4em;
+    border-color: #888;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: .3em;
+    background-color: #fff;
+    text-align: left;
+    font-size: .8em;
+}
+
+div#accordion article dic div address {
+    margin: .5em;
+}
+
+div#accordion div {
+    margin: .25em;
+}
+
+div#accordion article div {
+    margin: 0 .25em;
+}
+
