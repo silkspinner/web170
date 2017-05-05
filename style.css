@@ -1,4 +1,13 @@
+@charset "UTF-8";
 /* Collective Action styles */
+
+/*
+Theme Name: KochZap WordPress Theme
+Author: Ron Nims of Atrmisia Devsign
+Author URI: http://www.artdevsign.com/
+Description: Theme designed for KochZap App website
+Version: 1.0
+*/
 
 html,body {
   background-image: url("images/greyback.jpg");
@@ -115,45 +124,53 @@ header {
 	height: 3em;
 }
 
-#social {
-	width: 22%;
-	float: left;
-    margin:0px 6px;
-}
-
-#social div {
-	width: 96%;
-}
-
-#social-2col {
-    width: 22%;
-    float: left;
-    margin:0px 4px 0px 8px;
-}
-
-#social-2col div {
-	width: 96%;
-}
 
 #content {
-	/*width: 44%; /* Account for margins + border values */
-	width: 51%;
+	width: 72%;
 	float: left;
-    margin:0px 6px;
+    margin: 5px 15px;
+    padding: 5px;
+    background-color: #eae9ec;
+    border-radius: .5em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #eae9ec;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    text-align: center;
 }
 
-#content-2col {
-    width: 74%;
-    float: left;
-    margin:0px 0px 0px 4px;
+#content:hover {
+    border-color: darkred;
 }
-	
+
+#content .imageright {
+    width:42%;
+}
+
+#content .imageleft {
+    width:28%;
+}
+
 
 #sidebar {
-	width: 22%;
+	width: 20%;
 	float: left;
-    margin:0px 6px;
-    text-align: center;
+    text-align: left;
+    margin: 0 auto;
+    padding: .6em;
+    background-color: #eae9ec;
+    opacity: .75;
+    border-width: 2px;
+    border-color: #eae9ec;
+    border-style: solid;
+    border-radius: .5em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#sidebar:hover {
+    border-color: darkred;
+    opacity: 1;
 }
 
 footer {
@@ -186,24 +203,6 @@ footer {
 
 .billboard figcaption {
     font-size: .8em;    
-}
-
-.tweetslist {
-    margin-bottom: .5em;
-    padding: 5px;
-    background-color: #eae9ec;
-    opacity: .75;
-    border-radius: .5em;
-    font-family: 'Russo One', sans-serif;
-    text-align: center;
-}
-.tweetslist:hover {
-    background-color: #edecf8;
-    border: solid;
-    border-width: 2px;
-    border-color: darkred;
-    padding: 3px;
-    opacity: 1;
 }
 
 .billboard figure{
@@ -247,33 +246,6 @@ form>div>label>input,form>div>label>select {
 
 form textarea {
     width:90%;    
-}
-
-
-.maincontent {
-    margin: 2px 2px 6px 2px;
-    padding: 5px;
-    background-color: #eae9ec;
-    border-radius: .5em;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
-.maincontent:hover {
-    margin: 0px 0px 4px 0px;
-    background-color: #edecf8;
-    border: solid;
-    border-width: 2px;
-    border-color: darkred;
-    padding: 5px 5px 3px 5px;
-}
-
-.maincontent .imageright {
-    width:42%;
-}
-
-.maincontent .imageleft {
-    width:28%;
 }
 
 .main-flex {
@@ -487,7 +459,7 @@ MEDIA QUERIES
 	}
     
 	#content {
-		width: 63%;
+		width: 96%;
 		float: left;
         margin:0px 5px 0px 3px;
 	}
@@ -527,20 +499,6 @@ MEDIA QUERIES
 /* for 480px or less */
 @media screen and (max-width: 480px) {
 
-	#social {
-		width: 96%;
-		clear: both;
-        float: none;
-        margin:5px 5px;
-	}
-    
-	#social-2col {
-		width: 96%;
-		clear: both;
-        float: none;
-        margin:5px 5px;
-	}
-        
 	#content {
 		width: 96%;
         clear: both;
@@ -548,13 +506,6 @@ MEDIA QUERIES
         margin:5px 5px;
 	}
     
-	#content-2col {
-		width: 96%;
-        clear: both;
-		float: none;
-        margin:5px 5px;
-	}
-	
 	#sidebar {
 		width: 96%;
 		clear: both;
@@ -590,6 +541,114 @@ MEDIA QUERIES
     }
     .icon {
         display: none;
-    
+    }
+}
 
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+        white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
 }
