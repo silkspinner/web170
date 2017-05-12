@@ -167,11 +167,12 @@ header {
     border-radius: .5em;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
 #sidebar:hover {
     border-color: darkred;
     opacity: 1;
 }
+
+
 
 footer {
     margin: .5em 0;
