@@ -2,8 +2,11 @@
     <aside id="sidebar">
         <!-- WP submenu -->
         <div id="sub-navigation" class="widget">
-             <!-- if post is page, list pages -->
-            <?php if (is_page()): ?>
+             <!-- if post is front page, list pages -->
+            <?php if (is_front_page()): ?>
+                <h2 class="sub-navigation-title"> HOME PAGE</h2>
+            <?php elseif (is_page()): ?>
+                <!-- if post is page, list pages -->
                 <h2 class="sub-navigation-title">
                 <?php echo get_the_title($post->post_parent); ?></h2>
                 <ul class="sub-navigation-items">
@@ -14,15 +17,16 @@
                     wp_list_pages(array('child_of' => $post->ID, 'title_li' => __('')));
                 } ?>
                 </ul>
-            <?php endif; ?>
+            <?php else: ?>
 
-             <!-- if post is not page, list categories -->
-            <?php if (!(is_page())): ?>
+                <!-- if post is not page, list categories -->
                 <h2 class="sub-navigation-title">KochZap News</h2>
                 <ul class="sub-navigation-items">
                     <?php wp_list_categories(array('title_li' => __(''))); ?>
                 </ul>
             <?php endif; ?>
+            
+
         </div>
         <!-- END WP generated submenu -->
     </aside>
