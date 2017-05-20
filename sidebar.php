@@ -3,9 +3,7 @@
         <!-- WP submenu -->
         <div id="sub-navigation" class="widget">
              <!-- if post is front page, list pages -->
-            <?php if (is_front_page()): ?>
-                <h2 class="sub-navigation-title"> HOME PAGE</h2>
-            <?php elseif (is_page()): ?>
+            <?php if (is_page()): ?>
                 <!-- if post is page, list pages -->
                 <h2 class="sub-navigation-title">
                 <?php echo get_the_title($post->post_parent); ?></h2>

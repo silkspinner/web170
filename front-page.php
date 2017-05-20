@@ -20,12 +20,11 @@
         </ul>
     </div> 
 
-    <!-- Main WP loop -->
+    <!-- Front page WP loop -->
     <?php if(have_posts() ) : while(have_posts()) : the_post(); ?>
-
         <?php the_content() ?>
     <?php endwhile; endif; ?>
-    <!-- END Main WP loop -->
+    <!-- END Front page WP loop -->
 
     <h2>Latest Koch Stuff</h2>
     <ul>
@@ -37,6 +36,8 @@
     <?php endwhile; ?>
     <!-- END Show Posts WP loop -->   
     </ul>
+
+    <?php wp_reset_query(); ?>
     <small>front-page.php</small>
     
 </section>
