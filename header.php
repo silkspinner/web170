@@ -15,7 +15,9 @@
     <link href="https://fonts.googleapis.com/css?family=BenchNine:700|Source+Sans+Pro|Russo+One" rel="stylesheet">
     
     <!-- Script Files -->
-    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/0B8E04BA-BDE1-5A4E-A290-376E02A0CF12/main.js" charset="UTF-8"></script><script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/AC724F90-7C82-0A4F-A5A8-A575BA78ACB0/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/0B8E04BA-BDE1-5A4E-A290-376E02A0CF12/main.js" charset="UTF-8">
+    </script>
+
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery.flexslider.js"></script>

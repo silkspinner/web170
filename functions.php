@@ -11,7 +11,9 @@ Version: 1.0
 register_nav_menus(array(
 'main-menu' => __( 'Menu 1' ),
 ));
-//
+
+// Add theme support for post-thumbnails
+add_theme_support( 'post-thumbnails' );
 
 
 ?>

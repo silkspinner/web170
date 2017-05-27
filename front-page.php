@@ -25,19 +25,21 @@
         <?php the_content() ?>
     <?php endwhile; endif; ?>
     <!-- END Front page WP loop -->
+    <section>
+        <h2>Latest Koch Stuff</h2>
+        <ul>
+        <!-- Show last 6 Posts WP secondary loop -->
+        <?php rewind_posts(); ?>
+        <?php query_posts('showposts=6'); ?>
+        <?php while (have_posts()) : the_post(); ?>
+            <li><a href="<?php the_permalink(); ?>" type="text/html"><?php the_title(); ?></a>
+            <p><small class="byline"><?php the_time('D M j, Y'); ?> by <?php the_author(); ?> in <?php the_category(', '); ?></small></p></li>
+        <?php endwhile; ?>
+        <!-- END Show Posts WP loop -->   
+        </ul>
 
-    <h2>Latest Koch Stuff</h2>
-    <ul>
-    <!-- Show last 4 Posts WP loop -->
-    <?php rewind_posts(); ?>
-    <?php query_posts('showposts=4'); ?>
-    <?php while (have_posts()) : the_post(); ?>
-        <li><a href="<?php the_permalink(); ?>" type="text/html"><?php the_title(); ?></a></li>
-    <?php endwhile; ?>
-    <!-- END Show Posts WP loop -->   
-    </ul>
-
-    <?php wp_reset_query(); ?>
+        <?php wp_reset_query(); ?>
+    </section>
     <small>front-page.php</small>
     
 </section>

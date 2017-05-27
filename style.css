@@ -85,7 +85,7 @@ div.embed-container iframe {
 
 
 aside {
-    
+    margin-top: 5px;    
     float:right;
     width:35%;
 }
@@ -98,8 +98,62 @@ figure {
 }
 
 figure img {
+    width:100%;
+    max-width: 
+}
 
-    max-width: 100%;
+/*** Blog posts excerpt list styling ***/
+.byline {
+    background:linear-gradient(to bottom, #222, #666);
+    color: white;
+    padding: .15em .5em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    border-style: solid;
+    border-width: 0;
+    border-bottom-left-radius: .5em;
+    border-top-right-radius: .5em;
+    font-weight: normal;
+    width: 100%;
+}
+
+.byline a:link, .byline a:visited , .byline a:hover, .byline a:active {
+    color: white;
+    text-decoration: none;
+}
+
+#content img.attachment-thumbnail {
+    float: left;
+    margin: 1em 1em 0 0;    
+    border-style: solid;
+    border-width: 0;
+    border-radius: .5em;
+}
+
+article.post img {
+    margin: 1em;    
+    border-style: solid;
+    border-width: 0;
+    border-radius: .5em;
+}
+
+article.post-excerpt {
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+article.post-excerpt h2 {
+    margin-bottom: .3em;
+}
+
+/*** END Blog posts excerpt list styling ***/
+
+#content li {
+    margin-bottom: 1em;
+}
+
+#content li p {
+    margin: .5em auto;
 }
 
 .maincontent figcaption {
@@ -125,12 +179,11 @@ header {
 	height: 3em;
 }
 
-
 #content {
-	width: 72%;
+	width: 66%;
 	float: left;
-    margin: 5px 15px;
-    padding: 5px;
+    margin: 0 1em 1em 1em;
+    padding: 1em;
     background-color: #eae9ec;
     border-radius: .5em;
     border-width: 2px;
@@ -138,15 +191,15 @@ header {
     border-color: #eae9ec;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 700;
-    text-align: center;
+	text-align: center:
 }
 
 ul {
-    text-align: left;
+	text-align: left;
 }
 
 ul li {
-    margin-bottom: 1.5em;
+	margin-bottom: 1.5em;
 }
 
 #content:hover {
@@ -161,9 +214,8 @@ ul li {
     width:28%;
 }
 
-
 #sidebar {
-	width: 18%;
+	width: 20%;
 	float: left;
     text-align: left;
     margin: 0 auto;
@@ -176,12 +228,11 @@ ul li {
     border-radius: .5em;
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 #sidebar:hover {
     border-color: darkred;
     opacity: 1;
 }
-
-
 
 footer {
     margin: .5em 0;
@@ -251,7 +302,7 @@ form input, form select, form textarea, form label, form fieldset, form legend {
 
 form>div>label>input,form>div>label>select {
     width:80%;
-    font-size: 1em;
+        font-size: 1em;
 }
 
 form textarea {
@@ -444,10 +495,6 @@ form textarea {
     margin-bottom: .5em;
 }
 
-#content, #middle, #sidebar {
-	margin-bottom: 5px;
-}
-
 footer {
 	border: solid;
     border-width: 1px 0px;
@@ -459,21 +506,21 @@ footer {
 /************************************************************************************
 MEDIA QUERIES
 *************************************************************************************/
-/* for 800px or less */
+/* for 700px or less */
 @media screen and (max-width: 800px) {
     
     
 	#content {
-		width: 96%;
+		width: 94%;
 		float: left;
-        margin:0px 5px 0px 3px;
+        margin: 1em;
 	}
 	
 	#sidebar {
 		clear: both;
 		width: 96%;
 		float: none;
-        margin:5px 5px;
+        margin: 1em;
 	}
     
     a h1 {
@@ -501,53 +548,6 @@ MEDIA QUERIES
 
 }
 
-/* for 480px or less */
-@media screen and (max-width: 480px) {
-
-	#content {
-		width: 96%;
-        clear: both;
-		float: none;
-        margin:5px 5px;
-	}
-    
-	#sidebar {
-		width: 96%;
-		clear: both;
-        float: none;
-        margin:5px 5px;
-	}
-    
-    .billboard h3{
-        display: none;
-    }
-    
-    .soc-flex {
-        min-height: auto;
-    }
-    
-    .tweetslist {
-        display:none;
-    }
-    
-    .tweetslist2 {
-        display:block;
-    }
-
-    h1 {
-        font-size: 2em;
-        font-weight: bold;
-        margin: 0;
-    }
-    
-    div.list{
-        font-size: 1em;
-        line-height: 1.1em;
-    }
-    .icon {
-        display: none;
-    }
-}
 
 
 /* =WordPress Core

@@ -50,7 +50,7 @@
 }
 .flexslider .slides img {
   width: 100%;
-  max-width: 640px;
+  max-width: 720px;
   display: block;
 }
 .flexslider .slides:after {
