@@ -61,7 +61,26 @@ div.list{
     text-align: left;
     width: 80%;
     margin: 0 auto;
-    
+}
+
+
+.quote {
+  font-family: 'Cardo', serif;
+  font-size: 1.2em;
+  width: 80%;
+  height: auto;
+  margin: 1.5em auto;
+  background-color: #f2f2f2;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.9);;
+  border-radius: 10px;
+  color: #000;
+  box-shadow: 6px 10px 20px rgba(100,100,100,.8);;
+}
+
+.author {
+    text-align: right;
+    font-style: italic;
 }
 
 /* responsive styles for youtube, map and calendar*/

@@ -23,9 +23,25 @@
                     <?php wp_list_categories(array('title_li' => __(''))); ?>
                 </ul>
             <?php endif; ?>
-            
-
         </div>
-        <!-- END WP generated submenu -->
+        <!-- END WP generated submenu -
+
+        <!-- WP pull quote -->
+        <div id="quote" class="widget">
+            <?php if (get_post_meta($post->ID, 'QuoteText', true)) : ?>
+                <blockquote class="quote">
+                    "<?php echo get_post_meta($post->ID, 'QuoteText', true); ?>"
+                    <div class="author"><small><?php echo get_post_meta($post->ID, 'QuoteAuthor', true); ?></small></div>
+                </blockquote>
+
+            <?php endif; ?>
+            
+        </div>
+        <!-- END WP pull quote -->
+        
+        <!-- WP Dynamic Sidebar -->
+        <?php dynamic_sidebar(1); ?>
+        <!-- END WP Dynamic Sidebar -->
+        
     </aside>
     <!-- END RIGHT COL -->
