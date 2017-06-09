@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title><?php bloginfo('description'); ?> | <?php bloginfo('name'); ?> | Seattle</title>
+    <title><?php get_seo_title_tag(); ?></title>
 
     <!-- Meta Info -->
     <meta name="viewport" content="width=device-width" />
     <meta name="robots" content="noindex,nofollow" />
-
+    <meta name="description" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
+                                                                                                    
     <!-- Style Sheets --> 
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="all" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/flexslider.css" />
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/nav.css" />
     <link href="https://fonts.googleapis.com/css?family=BenchNine:700|Source+Sans+Pro|Russo+One" rel="stylesheet">
-    
+
     <!-- Script Files -->
     <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/0B8E04BA-BDE1-5A4E-A290-376E02A0CF12/main.js" charset="UTF-8">
     </script>
