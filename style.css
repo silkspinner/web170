@@ -16,11 +16,29 @@ html,body {
 }
 
 #wrapper {
-	width: 100%;
+	width: 90%;
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 1280px;
 	margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:flex-start;   
 }
+
+
+#flexwrap {
+    margin: 0;
+    padding: 0;
+    width 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items:flex-start;    
+}
+
 
 h1 {
     font-size: 2em;
@@ -109,13 +127,6 @@ div.embed-container iframe {
 }
 /* END responsive styles for youtube, map and calendar*/
 
-
-aside {
-    margin-top: 5px;    
-    float:right;
-    width:35%;
-}
-
 figure {
     display:inline-block;
     width:95%;
@@ -200,9 +211,7 @@ header {
 }
 
 #content {
-	width: 66%;
-	float: left;
-    margin: 0 1em 1em 1em;
+	width: 63%;
     padding: 1em;
     background-color: #eae9ec;
     border-radius: .5em;
@@ -234,11 +243,9 @@ ul li {
     width:28%;
 }
 
-#sidebar {
-	width: 24%;
-	float: left;
+aside {
+	width: 26%;
     text-align: left;
-    margin: 0 auto;
     padding: .6em;
     background-color: #eae9ec;
     opacity: .75;
@@ -264,34 +271,6 @@ footer {
     margin-top: 5px;
 }
 
-.billboard {
-    margin-bottom: .5em;
-    padding: 5px;
-    background-color: #eae9ec;
-    opacity: .75;
-    border-radius: .5em;
-    font-family: 'Russo One', sans-serif;
-    text-align: center;
-}
-.billboard:hover {
-    background-color: #edecf8;
-    border: solid;
-    border-width: 2px;
-    border-color: darkred;
-    padding: 3px;
-    opacity: 1;
-}
-
-.billboard figcaption {
-    font-size: .8em;    
-}
-
-.billboard figure{
-    font-size: 1.5em;
-    text-align: center;
-    font-weight: 700;
-}
-
 .imageright {
     float:right;
     margin: .5em;
@@ -314,7 +293,6 @@ footer {
     width:90%;
     margin: .5em auto
 }
-
 
 form input, form select, form textarea, form label, form fieldset, form legend {
     font-size: 1.2em;
@@ -372,7 +350,6 @@ form textarea {
     color:darkblue;
 }
 
-
 .brand-flex {
     margin: .5em auto;
     padding: .25;
@@ -409,111 +386,7 @@ form textarea {
     max-width: 180px;
     
 }
-.news-flex {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    align-items: center;
 
-}
-.news-flex article {
-    margin:1em;
-    padding: 1em 0;
-    
-}
-.news-flex p {
-    width:80%;
-    margin:1em auto;
-    
-}
-.news-flex article:hover{
-    background-color: #fff;
-}
-.news-flex figure:hover{
-    color:darkblue;
-}
-
-.newsteaselist article {
-    max-width: 320px;
-    font-size: 1em;
-}
-.newsteaselist article:hover{
-    background-color: #fff;
-}
-.newsteaselist figure:hover{
-    color:darkblue;
-}
-
-.soc-flex {
-    width:95%;
-    min-height: 6em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    align-items: center;
-
-}
-
-.soc-flex img {
-    width:100%;
-}
-
-.soc-flex img:hover {
-    width:120%;
-}
-
-.newsteaselist {
-    margin: 0 auto;
-    padding: 10px 5px 10px 5px;
-    background-color: #eae9ec;
-    opacity: .75;
-    border-radius: .5em;
-    width:95%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    align-items: center;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-.newsteaselist:hover {
-    padding: 8px 3px 8px 3px;
-    background-color: #edecf8;
-    border-style: solid;
-    background-color: #edecf8;
-    border-width: 2px;
-    border-color: darkred;
-    opacity: 1;
-}
-
-.newsteaselist article{
-    margin: .5em auto;
-    font-size: 1.5em;
-    text-align: center;
-    padding-bottom: .5em;
-    border-bottom:3px solid #cdcdcd;
-}
-.newsteaselist article:hover{
-    background-color: #fff;
-}
-
-.newsteaselist figure{
-    font-size: 1em;
-    text-align: center;
-    font-weight: 700;
-}
-.newsteaselist figure:hover{
-    color:darkblue;
-}
-
-.newsteaselist h3{
-    margin-bottom: .5em;
-}
 
 footer {
 	border: solid;
@@ -526,21 +399,21 @@ footer {
 /************************************************************************************
 MEDIA QUERIES
 *************************************************************************************/
-/* for 800px or less */
-@media screen and (max-width: 800px) {
-    
+/* for 780px or less */
+@media screen and (max-width: 780px) {
+ 
+    #wrapper {
+        flex-direction: column;
+    }
     
 	#content {
-		width: 94%;
-		float: left;
-        margin: 1em;
+		width: 92%;
 	}
 	
 	#sidebar {
-		clear: both;
-		width: 96%;
-		float: none;
-        margin: 1em;
+
+		width: 92%;
+
 	}
     
     a h1 {
