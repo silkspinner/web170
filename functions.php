@@ -57,4 +57,42 @@ function get_seo_title_tag() {
     echo ' | Seattle, WA';
 }
 
+// build flexslider HTML from "attached" images
+function build_flexslider() {
+    
+    global $post;
+    
+    //get array of attached images
+    $attachments = get_children(array('post_parent' => $post->ID,
+                                      'order' => 'ASC',
+                                      'orderby' => 'menu_order',
+                                      'post_type' => 'attachment',
+                                      'post_mime_type' => 'image', ));
+    
+    // if there are attachments, wrap them in flexslider html
+    if ($attachments) {
+        
+        echo '<div class="flexslider">';    // open div
+        echo '<ul class="slides">';         // open list
+        
+        foreach ($attachments as $att_id => $attachment ) {
+            
+            echo '<li>';    // open list item 
+            echo wp_get_attachment_image( $att_id, 'large' );   // add attached image
+            
+                echo '<p>';     // open paragraph
+                echo get_post_field( 'post_excerpt', $attachment->ID ); // add image caption
+                echo '</p>';    // close paragraph
+            
+            echo '</li>';   // close list item 
+            
+        }
+        
+        echo '</ul>';   // close list
+        echo '</div>';  // close div
+        
+    }    // END if there are attachments
+    
+}   // END build flexslider 
+
 ?>
